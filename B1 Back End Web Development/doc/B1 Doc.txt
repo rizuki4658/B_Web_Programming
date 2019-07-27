@@ -1,0 +1,55 @@
+1.Upload Data ke dalam database
+
+	1. Membuat database di mysql localhost dengan nama agaranaratest
+	2. Mendownload semua data kemudian diconvert secara online menggunakan sqlizer di https://sqlizer.io/ dimana hasil convert menghasilkan text berupa perintah kemudian di copy
+	3. Paste di localhost php myadmin lalu klik go.
+	4. semua data sudah masuk ke database tepatnya kedalam tabel dengan nama data1.
+
+
+
+
+
+2.Pada soal B1 nomor 2
+	a. Membuat file conn.php koneksi ke database kemudian di load disetiap file jawaban menggunakan require_once.
+	b. Membuat variabel query dimana variabel berisi perintah select memanggil data berdsarkan kondisi yang telah ditentukan pada soal.
+	c. Mengeksekusi varibel tadi dalam perintah mysqli_query.
+	d. Melakukan pengecekan apakah data yang dicari ada
+	e. Mengeluarkan data dengan metode while
+	f. Melakukan ouput/echo untuk melihat hasil dari query-query yang dijalankan
+	g. point a-f dilakukan kembali untuk mengambil nilai berbeda karena langkah pertama dilakukan untuk mengambil nilai BADE dan yang Kedua untuk mengambil nilai LIMIT
+
+3.Pada soal B1 nomor 3
+	a. Membuat file conn.php koneksi ke database kemudian di load disetiap file jawaban menggunakan require_once.
+	b. Membuat variabel query dimana variabel berisi perintah select memanggil data berdsarkan kondisi yang telah ditentukan pada soal.
+	c. Mengeksekusi varibel tadi dalam perintah mysqli_query.
+	d. Melakukan pengecekan apakah data yang dicari ada
+	e. Mengeluarkan data dengan metode while
+	f. Melakukan ouput/echo untuk melihat hasil dari query-query yang dijalankan
+
+4.Pada soal B1 nomor 4
+	a. Membuat file conn.php koneksi ke database kemudian di load disetiap file jawaban menggunakan require_once.
+	b. Membuat variabel query dimana variabel berisi perintah select istinct agar pemanggilan data yang sama tidak terjadi atau tidak ada data yang sama terpanggil kemudian dilakukan pengurutan berdasarkan BADE dengan DESCENDING sehingga data diurutkan dari besar ke kecil, setelah itu ditambah perintah LIMIT 5 agar mendapat 5 nasabah.
+	c. Mengeksekusi varibel tadi dalam perintah mysqli_query.
+	d. Melakukan pengecekan apakah data yang dicari ada
+	e. Mengeluarkan data dengan metode while
+	f. Melakukan ouput/echo untuk melihat hasil dari query-query yang dijalankan
+
+5.Pada soal B1 nomor 5
+	Pada permasalah ini langkah sebelumnya sama, yang beda hanyalah pada variabel query yang dibuat dua kali dan eksekusi query dilakukan dua kali, query pertama dilakukan order berdasarkan DATE secara DESCENDING untuk mengambil nilai-nilai BADE yang terakhir masuk kemudian query yang kedua sebalinya untuk mengmabil nilai-nilai BADE yang paling awal masuk.
+
+6.Pada soal B1 nomor 6,7 dan 8.
+	a. Pada soal 6,7 dan 8 dilakukan dengan cara yang sama, melakukan perintah QUERY SQL dengan select DISTINCT untuk mengambil Nilai CUSTOMER_RATING, BUC, dan PRODUK secara unik kemudian setalah data-data didapatkan saya memasukannya kedalam variabel array yang sudah dibuat sebelumnya dengan metode push.
+	b. Setelah nilai Nilai CUSTOMER_RATING, BUC, dan PRODUK dimasukan kedalam array kemudian saya melakukan metode for loop untuk melakukan QUERY SQL secara berulang dimana perintah kondisi WHERE columns=value(si value ini akan berubah sesuai dengan nilai i).
+	c. mengecek hasil eksekusi query dengan IF kemudian mengeluarkan data dengan WHILE melakukan penjumlahan berdasarkan Kondisi, misalkan CUSTOMER_RATING=NR maka jumlahkan nilai BADE NR, kemudian saya push kembali jumlah pertama kedalam array begitu seterusnya sampai kondisi For loop terhenti.
+	d. Setelah jumlah BADE didapatkan kemudian saya keluarkan kembali nilai-nilai tersebut dari variabel $total yang berupa array dengan metode for loop.
+	e. Melakukan echo/print data-data yang ada dalam array.
+
+7. Bagian Endpoint
+	a. Membuat file php dengan B1.Endpoint.php, melakukan loadfile koneksi dengan require_once.
+	b. Membuat struktur html, form(metode POST) dan style css sederhana.
+	c. Melakukan pengecekan jika tombol filter diklik.
+	d. Melakukan pengecekan apakah select option filter dan value filter telah dipilih dan diisi.
+	e. Membuat variabel yang berisi query SELECT sql diman kondisi WHERE kolom tabel diambil dari nila variabel $FILTER yang diambil dari input select, kemudian untuk VALUE nya diambil dari variabel $VALUE yang diambi dari input text
+	f. Melakukan Eksekusi query, setelah itu melakukan pengecekan jika data tersedia atau ada maka akan menampilkan data dalam bentuk tabel, jika tidak ada maka akan menampilkan pesan data tidak ditemukan.
+	g. Pada saat pengecekan data tersedia, saya melakukan pengulangan WHILE untuk mengeluarkan data array dari hasil eksekusi query.
+	f. Setiap kategori akan mempengaruhi tampilan tabel jika Kategori yang dipilih PRODUK maka kolom PRODUK akan memiliki backgroun merah atau isitilahnya di highlight.  
